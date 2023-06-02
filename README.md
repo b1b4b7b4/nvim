@@ -426,7 +426,7 @@ the end result should look like this
 
 ## LSP (language server protocol)
 
-To install the Language Server Protocol (LSP) and enable autocompletion similar to VSCode, we can use the lspconfig plugin. In your packer.lua file, add the following lines:
+To install the Language Server Protocol (LSP) https://github.com/VonHeikemen/lsp-zero.nvim and enable autocompletion similar to VSCode, we can use the lspconfig plugin. In your packer.lua file, add the following lines:
 
 ```lua
 use {
