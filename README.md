@@ -1,3 +1,5 @@
+# Imagen transformers guids for installing sexy NeoVim😎
+
 Hello smurfs and other ones who think they are real people, we'll walk through the process of installing and configuring my neovim setup for TypeScript and other projects. Before we begin, make sure you have Chocolately installed on your machine. Chocolately is a package manager for Windows that simplifies the installation process.
 
 If you don't have Chocolately, you can easily install it using PowerShell with administrator rights. Just open a PowerShell session and paste the following code:
