@@ -349,7 +349,7 @@ _if something went wrong so far i dont think i can help you and also i dont thin
 
 ## VScode theme
 
-To install the VSCode theme, you need to include the following code in your packer.lua file:
+To install the VSCode theme (https://github.com/Mofiqul/vscode.nvim), you need to include the following code in your packer.lua file:
 
 ```lua
 use 'Mofiqul/vscode.nvim'
