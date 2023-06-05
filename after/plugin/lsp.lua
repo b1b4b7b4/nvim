@@ -54,7 +54,7 @@ lsp.on_attach(function(_, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<F2>", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
-  vim.keymap.set("n", "<C-t>", "<cmd>pop<CR>", opts)
+  vim.keymap.set("n", "<C-BS>", "<cmd>pop<CR>", opts)
 end)
 
 lsp.setup()
