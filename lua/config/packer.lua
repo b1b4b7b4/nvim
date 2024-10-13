@@ -52,9 +52,9 @@ return packer.startup(function(use)
             { 'williamboman/mason.nvim',          run = function() pcall(vim.cmd, 'MasonUpdate') end },
             { 'williamboman/mason-lspconfig.nvim' },
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'L3MON4D3/LuaSnip' },     -- Required
             { 'hrsh7th/cmp-path' },
             { 'rafamadriz/friendly-snippets' },
         }
@@ -62,10 +62,10 @@ return packer.startup(function(use)
 
     -- Version control
     use "tpope/vim-fugitive"
-    -- use "mbbill/undotree" not working 
+    -- use "mbbill/undotree" not working
 
     -- Navigation
-    use { 'nvim-telescope/telescope.nvim', tag = '0.1.1', requires = { { 'nvim-lua/plenary.nvim' } } }
+    use { 'nvim-telescope/telescope.nvim', tag = '0.1.4', requires = { { 'nvim-lua/plenary.nvim' } } }
     use 'theprimeagen/harpoon'
 
     -- Bruh
