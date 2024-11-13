@@ -16,7 +16,16 @@ autocmd("BufWinEnter", {
 
         -- rebase always
         vim.keymap.set("n", "<leader>P", function()
-            vim.cmd.Git({'pull',  '--rebase'})
+    -- Prompt the user for a branch name
+        vim.ui.input({ prompt = "Enter new branch name: " }, function(branch_name)
+                if branch_name and branch_name ~= "" then
+                    -- Run Git commands to create and push the branch
+                    vim.cmd("Git checkout -b " .. branch_name) -- Create new branch
+                    vim.cmd("Git push -u origin " .. branch_name) -- Push branch to origin and set upstream
+                else
+                    print("Branch name cannot be empty!")
+                end
+            end)
         end, opts)
 
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
