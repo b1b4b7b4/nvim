@@ -1,5 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>rt", ":LspRestart<CR>", { desc = "Restart LSP" })
 
 vim.opt.termguicolors = true
 -- vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
@@ -33,3 +34,4 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
