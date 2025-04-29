@@ -22,14 +22,6 @@ vim.opt.mouse = 'a'
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
 
--- Sync clipboard between OS and Neovim.
---  Schedule the setting after `UiEnter` because it can increase startup-time.
---  Remove this option if you want your OS clipboard to remain independent.
---  See `:help 'clipboard'`
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
-
 -- Enable break indent
 vim.opt.breakindent = true
 
@@ -756,6 +748,15 @@ require('lazy').setup({
         -- By default, you may press `<c-space>` to show the documentation.
         -- Optionally, set `auto_show = true` to show the documentation after a delay.
         documentation = { auto_show = false, auto_show_delay_ms = 500 },
+        menu = {
+          -- nvim-cmp style menu
+          draw = {
+            columns = {
+              { 'label', 'label_description', gap = 1 },
+              { 'kind' },
+            },
+          },
+        },
       },
 
       sources = {
@@ -919,7 +920,7 @@ require('lazy').setup({
       end)
     end,
   },
-  -- { 'numToStr/Comment.nvim', opts = {} },
+  { 'numToStr/Comment.nvim', opts = {} },
   {
     'tpope/vim-fugitive',
     config = function()
@@ -1004,6 +1005,8 @@ vim.keymap.set('n', '<leader>Y', [["+Y]])
 vim.keymap.set({ 'n', 'v' }, '<leader>d', [["_d]])
 vim.keymap.set('n', '<C-n>', '<cmd>cnext<CR>zz')
 vim.keymap.set('n', '<C-p>', '<cmd>cprev<CR>zz')
+vim.keymap.set('n', 'Q', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/tmux-sessonizer<CR>')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
