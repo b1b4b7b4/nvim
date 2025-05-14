@@ -838,5 +838,7 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww ~/tmux-sessonizer<CR>')
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>')
 
+vim.keymap.set('n', '<leader>td', '<cmd>TodoQuickFix<CR>')
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=4 sts=4 sw=4 et
